@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU DOCS</title>
+    <link rel="shortcut icon" href="/src/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+</head>
+
+<body>
+    <section class="parent">
+        <header class="header">
+            <div class="logo"><a href="/index.html">AU <span>DOCS</span></a></div>
+            <ul class="nav">
+                <li><a href="/sub files/SYLLABUS.html">SYLLABUS</a></li>
+                <li><a href="https://coe1.annauniv.edu/home" target="_blank">RESULTS</a></li>
+                <li><a href="/sub files/GPA CALCULATOR.html">GPA CALCULATOR</a></li>
+                <li><a href="/sub files/CGPA.html">CGPA CALCULATOR</a></li>
+                <li><a href="/sub files/ATTENDANCE.html">ATTENDANCE CALC</a></li>
+                <li><a href="https://cfr.annauniv.edu/research/academics/latest-news.php" target="_blank">NEWS</a></li>
+                <li><a href="./COLLEGE NOTES.html">COLLEGE NOTES</a></li>
+            </ul>
+            <button class="menu">
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+        <main>
+            <h1>CIVIL - 8th Semester</h1>
+            <h1>Theory</h1>
+            <div class="theory">
+                <div class="sub">
+                    <div class="innersublect">
+                        <div class="subname">
+                            <h2>Project Work / Internship : CE3811</h2>
+                        </div>
+                        <div class="under">
+                            <div class="score">
+                                Credit : <input disabled type="text" id="c1" value="10">
+                            </div>
+                            <div class="mark">
+                                Grade : <select name="Grade" id="Gp1">
+                                    <option value="10" >O</option>
+                                    <option value="9" >A+</option>
+                                    <option value="8" >A</option>
+                                    <option value="7" >B+</option>
+                                    <option value="6" >B</option>
+                                    <option value="5" >C</option>
+                                    <option value="0" >U</option>
+                                    <option value="0" >AB</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit" id="total" onclick="GPA()">calculate</button>
+                </div>
+                
+                <div >
+                    <h1>Your 8th Semester GPA </h1>
+                    <div class="answer">
+                        <div class="result" id="result"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="logo2"><a href="/index.html">AU DOCS</a></div>
+            <ul class="nav1">
+                <li><a href="/sub files/SYLLABUS.html">SYLLABUS</a></li>
+                <li><a href="https://coe1.annauniv.edu/home" target="_blank">RESULTS</a></li>
+                <li><a href="/sub files/GPA CALCULATOR.html">GPA CALCULATOR</a></li>
+                <li><a href="/sub files/CGPA.html">CGPA CALCULATOR</a></li>
+                <li><a href="/sub files/ATTENDANCE.html">ATTENDANCE CALC</a></li>
+                <li><a href="https://cfr.annauniv.edu/research/academics/latest-news.php" target="_blank">NEWS</a></li>
+                <li><a href="./COLLEGE NOTES.html">COLLEGE NOTES</a></li>
+                <li><a href="./ABOUT.html">ABOUT</a></li>
+            </ul>
+        </div>
+        <hr />
+        <p>© 2024 <a href="/index.html">AU DOCS™</a>. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function GPA() { 
+            const c1 = parseInt(document.getElementById("c1").value);
+
+            const Gp1 = parseInt(document.getElementById("Gp1").value);
+
+            const totalGradePoints = 
+                (c1 * Gp1);
+            const totalCredits = c1  ;
+            const gpa = (totalGradePoints / totalCredits).toFixed(4);
+            document.getElementById("result").innerHTML = `Congratulations! GPA is: ${gpa}`;
+        }
+    </script>
+    
+    <script>
+        const navToggle = document.querySelector('.menu');
+        const nav = document.querySelector('.nav');
+    
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU DOCS</title>
+    <link rel="shortcut icon" href="/src/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+<style>
+       @media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+ 
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #1B1D25;
+    overflow: auto; 
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header{
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 20px 40px 0 40px;
+  border-radius: 5px;
+  position: fixed;
+  width: 95%;
+  top:0;
+}
+
+header span{
+    color:rgb(223, 16, 116);
+}
+
+header div{
+  margin-left: 20px;
+}
+
+.logo a{
+  text-decoration: none;
+  color: black;
+  line-height: 2rem;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 1.5rem;
+}
+
+header ul{
+  margin-right: 20px;
+  
+}
+.nav{
+  display: flex;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.nav a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav a:hover{
+  border-bottom: 2px solid rgb(227, 61, 19);
+  color:rgb(223, 16, 116) ; 
+
+}
+
+.nav li{
+  display: inline-flex;
+}
+
+.menu{
+    display: none;
+    border: 2px solid black;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    
+  }
+
+  .menu span {
+    width: 25px;
+    height: 3px;
+    background: #ee55a2ad;
+    display: block;
+    margin: 5px 0;
+  }
+
+  .line{
+    height:3px;
+    width:20px;
+    background-color: black;
+    margin-bottom: 3px;
+    
+  }
+
+  main{
+    margin: 120px 40px 0 40px;
+  }
+
+  main h1{
+    text-align: center;
+    color: #e5e7eb;
+    font-size: 2rem;
+  }
+
+  .box{
+     display: grid;
+     justify-content:center;
+  }
+
+
+  .box1{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:100;
+    font-style: normal;
+    font-size: 1 rem;
+
+    background-color: #23252e;
+    height: 15vh;
+    margin-top: 40px;
+    width: 30rem;
+    border-radius: 7px;
+    color: #e5e7eb;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .box1 span{
+    margin-left: 30px;
+    
+    
+  }
+
+  .box1 input{
+    text-align: center;
+    width: 7%;
+    height: 5vh;
+    margin-right: 50px;
+    background-color: #2a2b30;
+    border: 2px solid rgba(255, 255, 255, 0);
+    color: white;
+    border-radius: 5px;
+    line-height: 2rem;
+  }
+.percentage{
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 4vh;
+  margin-right: 50px;
+  
+}
+
+.button{
+  display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button button{
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #1B1D25;
+    color: aliceblue;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    height: 8vh;
+    width: 120px;
+    border: 3px solid rgb(223, 16, 116) ;
+    border-radius: 375rem;
+  }
+  .box button:hover{
+    border-radius: 375rem;
+    background-image:linear-gradient(to right, rgb(223, 16, 116), rgb(227, 61, 19))  ;
+  }
+
+  footer{
+    margin-top: 330px;
+    background-color: rgb(22, 23, 30);
+    height:150px;
+    color: rgb(156 163 175);
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  footer hr{
+    width:95%;
+  }
+
+  footer a{
+    color:rgb(156 163 175);
+    text-decoration: none;
+  }
+  
+  footer a:hover{
+    color:#e5e7eb;
+  }
+
+
+  .footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px 0 40px;
+    top:60px;
+  }
+
+  .logo2 a{
+    color: #e5e7eb;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    text-decoration: none;
+    font-family:Montserrat, sans-serif;
+
+  }
+
+.nav1 {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.nav1 a{
+  text-decoration: none;
+  color: rgb(156 163 175);
+}
+
+.nav1 li{
+  display: block;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            appearance: textfield;
+        }
+
+        @media all and (max-width: 640px) {
+
+          header{
+    width: 90%;
+    margin-left: 20px;
+  }
+
+ 
+  
+  .nav{
+    flex-direction: column;
+     max-height: 0;
+     background-color: aliceblue;
+     width: 90%;
+     position: absolute;
+     top: 60px;
+     left: 0;
+     gap: 0px;
+     margin-right: 20px;
+ }
+
+.nav li{
+  display:block;
+  padding: 10px 0;
+
+}
+
+.nav.open {
+  max-height: 300px;
+}
+
+ul{
+  text-align: center;
+}
+
+.menu{
+  display:block;
+  position: absolute;
+  right: 20px;
+}
+
+footer{
+  height:380px;
+
+}
+.nav1{
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.box1{
+  width: 100%;
+}
+
+.button button{
+  height:9vh;
+
+}
+}
+</style>
+</head>
+
+<body>
+    <section class="parent">
+        <header>
+            <div class="logo"><a href="/index.html">AU <span>DOCS</span></a></div>
+            <ul class="nav">
+              <li><a href="SYLLABUS.html">SYLLABUS</a></li>
+              <li><a href="https://coe1.annauniv.edu/home" target="_blank">RESULTS</a></li>
+              <li><a href="GPA CALCULATOR.html">GPA CALCULATOR</a></li>
+              <li><a href="/sub files/CGPA.html">CGPA CALCULATOR</a></li>
+              <li><a href="/sub files/ATTENDANCE.html">ATTENDANCE CALC</a></li>
+              <li><a href="https://cfr.annauniv.edu/research/academics/latest-news.php" target="_blank">NEWS</a></li>
+              <li><a href="./COLLEGE NOTES.html">COLLEGE NOTES</a></li>
+            </ul>
+            <button class="menu">
+              <span></span>
+              <span></span>
+          </button>
+        </header>
+
+        <main>
+            <h1>ATTENDANCE CALC</h1>
+            <div class="box">
+                <div class="box1">
+                    <span>Total no of working days   - </span>
+                    <input type="number" id="working-day" name="working-day" value="0"  min="0" max="100" required>
+                </div>
+                <div class="box1">
+                    <span> No of attended days   - &nbsp; &nbsp; &nbsp;</span>
+                    <input type="number" id="attend-days" name="attend-days" value="0"  min="0" max="100" required>
+                </div>
+                <div class="box1">
+                    <span> Your Attendance Percentage   </span>
+                    <span class="percentage" id="percent"><span>%</span></span>
+                </div>
+                <div class="button">
+                 <button type="submit" id="total" onclick="ATTENDANCE()">Calculate</button>  
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="logo2"><a href="/index.html">AU DOCS</a></div>
+            <ul class="nav1">
+                <li><a href="/sub files/SYLLABUS.html">SYLLABUS</a></li>
+                <li><a href="https://coe1.annauniv.edu/home" target="_blank">RESULTS</a></li>
+                <li><a href="/sub files/GPA CALCULATOR.html">GPA CALCULATOR</a></li>
+                <li><a href="/sub files/CGPA.html">CGPA CALCULATOR</a></li>
+                <li><a href="ATTENDANCE.html">ATTENDANCE CALC</a></li>
+                <li><a href="https://cfr.annauniv.edu/research/academics/latest-news.php" target="_blank">NEWS</a></li>
+                <li><a href="./COLLEGE NOTES.html">COLLEGE NOTES</a></li>
+                <li><a href="./ABOUT.html">ABOUT</a></li>
+            </ul>
+        </div>
+        <hr />
+        <p>© 2024 <a href="/index.html">AU DOCS™</a>. All Rights Reserved.</p>
+    </footer>
+<script>
+     
+    function ATTENDANCE(){
+        var working_day = document.getElementById("working-day").value;
+        var attend_days = document.getElementById("attend-days").value;
+        var percentage = (attend_days/working_day)*100;
+        document.getElementById("percent").innerHTML = percentage.toFixed(2) + "%" ;
+        
+    }
+
+</script>
+
+<script>
+  const navToggle = document.querySelector('.menu');
+  const nav = document.querySelector('.nav');
+
+  navToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+
+</html>

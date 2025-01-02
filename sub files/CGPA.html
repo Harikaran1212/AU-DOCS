@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU DOCS</title>
+    <link rel="shortcut icon" href="/src/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="parent">
+        <header>
+            <div class="logo"><a href="/index.html">AU <span>DOCS</span></a></div>
+            <ul class="nav">
+                <li><a href="SYLLABUS.html">SYLLABUS</a></li>
+                <li><a href="https://coe1.annauniv.edu/home" target="_blank">RESULTS</a></li>
+                <li><a href="GPA CALCULATOR.html">GPA CALCULATOR</a></li>
+                <li><a href="/sub files/CGPA.html">CGPA CALCULATOR</a></li>
+                <li><a href="/sub files/ATTENDANCE.html">ATTENDANCE CALC</a></li>
+                <li><a href="https://cfr.annauniv.edu/research/academics/latest-news.php" target="_blank">NEWS</a></li>
+                <li><a href="./COLLEGE NOTES.html">COLLEGE NOTES</a></li>
+              </ul>
+            <button class="menu">
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+                <h1>CGPA CALCULATOR</h1>
+                <p>Calculate your overall CGPA here</p>
+             <div class="boxes">
+            <div class="box">
+                
+                <span>No of semesters you have completed - &nbsp;</span>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div class="box" id="box1">
+                <span>Semester 1 GPA </span>
+                <input type="number" id="sem1" name="sem1" value="0">
+            </div>
+            <div class="box" id="box2">
+                <span>Semester 2 GPA </span>
+                <input type="number" id="sem2" name="sem2" value="0">
+            </div>
+            <div class="box" id="box3">
+                <span>Semester 3 GPA </span>
+                <input type="number" id="sem3" name="sem3" value="0">
+            </div>
+            <div class="box" id="box4">
+                <span>Semester 4 GPA </span>
+                <input type="number" id="sem4" name="sem4" value="0">
+            </div>
+            <div class="box" id="box5">
+                <span>Semester 5 GPA </span>
+                <input type="number" id="sem5" name="sem5" value="0">
+            </div>
+            <div class="box" id="box6">
+                <span>Semester 6 GPA </span>
+                <input type="number" id="sem6" name="sem6" value="0">
+            </div>
+            <div class="box" id="box7">
+                <span>Semester 7 GPA </span>
+                <input type="number" id="sem7" name="sem7" value="0">
+            </div>
+            <div class="box" id="box8">
+                <span>Semester 8 GPA </span>
+                <input type="number" id="sem8" name="sem8" value="0">
+            </div>  
+            <div class="button">          
+             <button type="submit" id="CGPA-mark">Calculate</button>   
+             </div>
+             <div class="answer">
+                <h1>Your Overall CGPA  </h1>
+                <div class="answer">
+                    <div class="result" id="result"></div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="logo2"><a href="/index.html">AU DOCS</a></div>
+            <ul class="nav1">
+        <li><a href="SYLLABUS.html">SYLLABUS</a></li>
+        <li><a href="https://coe1.annauniv.edu/home" target="_blank">RESULTS</a></li>
+        <li><a href="GPA CALCULATOR.html">GPA CALCULATOR</a></li>
+        <li><a href="/sub files/CGPA.html">CGPA CALCULATOR</a></li>
+        <li><a href="/sub files/ATTENDANCE.html">ATTENDANCE CALC</a></li>
+        <li><a href="https://cfr.annauniv.edu/research/academics/latest-news.php" target="_blank">NEWS</a></li>
+        <li><a href="./COLLEGE NOTES.html">COLLEGE NOTES</a></li>
+      </ul>
+        </div>
+        <hr />
+        <p>© 2024 <a href="/index.html">AU DOCS™</a>. All Rights Reserved.</p>
+    </footer>
+    <script>
+        const navToggle = document.querySelector('.menu');
+        const nav = document.querySelector('.nav');
+      
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+      </script>
+    <script>
+        document.querySelector("select").addEventListener("change", function () {
+            const selectedSemesters = parseInt(this.value);
+            for (let i = 1; i <= 8; i++) {
+                const box = document.getElementById(`box${i}`);
+                if (i <= selectedSemesters) {
+                    box.style.display = "block"; 
+                } else {
+                    box.style.display = "none"; 
+                }
+            }
+        });
+    
+  
+        document.getElementById("CGPA-mark").addEventListener("click", function () {
+            const selectedSemesters = parseInt(document.querySelector("select").value);
+            let totalGPA = 0;
+            for (let i = 1; i <= selectedSemesters; i++) {
+                const semGPA = parseFloat(document.getElementById(`sem${i}`).value) || 0;
+                totalGPA += semGPA;
+            }
+            const CGPA = (totalGPA / selectedSemesters).toFixed(2);
+            document.getElementById("result").innerHTML = `Congratulations! CGPA is: ${CGPA}`;
+        });
+    </script>
+    
+    
+    
+    
+
+</body>
+
+</html>
