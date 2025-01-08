@@ -140,7 +140,7 @@
                 const semGPA = parseFloat(document.getElementById(`sem${i}`).value) || 0;
                 totalGPA += semGPA;
             }
-            const CGPA = (totalGPA / selectedSemesters).toFixed(2);
+            const CGPA = (totalGPA / selectedSemesters).toFixed(4);
             document.getElementById("result").innerHTML = `Congratulations! CGPA is: ${CGPA}`;
         });
     </script>
