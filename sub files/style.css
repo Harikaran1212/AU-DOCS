@@ -134,7 +134,7 @@ header ul{
 
  .box select{
   color: aliceblue;
-  width: 16%;
+  width: 12%;
   height: 4vh;
   text-align: center;
   background-color: #2a2b30;
@@ -290,7 +290,12 @@ input[type=number]::-webkit-outer-spin-button,
               position: absolute;
               right: 20px;
             }
-          
+
+             .box select{
+            min-width: 20%;
+           } 
+                 
+                 
            footer{
             height:380px;
             
