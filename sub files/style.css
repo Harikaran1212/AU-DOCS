@@ -129,11 +129,12 @@ header ul{
     padding: 20px;
     align-items: center;
     box-sizing: border-box;
+    gap:5px;
 }
 
  .box select{
   color: aliceblue;
-  width: 12%;
+  width: 16%;
   height: 4vh;
   text-align: center;
   background-color: #2a2b30;
